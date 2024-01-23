@@ -9,10 +9,10 @@ class ServerInfoViewTest(TestCase):
     def run_test(self, test_name, func):
         try:
             func()
-            print(f"Passed: {test_name}")
+            print(f"Passed {test_name}")
         except AssertionError as e:
-            print(f"Failed: {test_name}")
-            self.fail(f"Test {test_name} failed: {e}")
+            print(f"Failed {test_name}")
+            self.fail(f"Test {test_name} failed {e}")
 
     def test_server_info_view_status_code(self):
         url = reverse('server_info')
